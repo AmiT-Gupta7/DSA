@@ -169,8 +169,161 @@ void print16(int n){
         
     }
 }
+// Pattern No. 17
+void print17(int n){
+    // Space
+    for(int i = 0;i < n; i++){ 
+        for(int j = 0; j < n-i-1;j++){
+            cout << " ";
+        }
+        // Character
+        char ch = 'A';
+        int breakpoint = (2*i+1)/2;
+        for(int j = 1; j <= 2*i+1;j ++){
+            cout << ch;
+            if(j <= breakpoint) ch++;
+            else ch--;
+        }
+        //Space
+        for(int j = 0; j < n-i-1;j++){
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+// Pattern No. 18
+void print18(int n){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n-i-1;j++){
+            cout << " ";
+        }
+
+        int num = 1;
+        int breakpoint = (2*i+1)/2;
+        for(int j = 1; j <= 2*i+1;j++){
+            cout << num;
+            if(j <= breakpoint) num++;
+            else num--;
+        }
+        
+        for(int j = 0; j < n-i-1;j++){
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+// Pattern No. 19
+void print19(int n){
+    for(int i = 1; i <= n; i++){
+        char ch = 'A'+i-1;
+		for(int j = 1; j <= i; j++){
+			cout << ch;
+            ch++;
+		}
+		cout << endl;
+	}
+}
+// Pattern No. 20
+void print20(int n){
+    for(int i = 0; i < n; i++){
+        for(int j = n; j >= 1; j--){
+            cout << j;
+        }
+        for(int j = 2; j <= n; j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+}
+// pattern No. 21
+void print21(int n){
+    for(int i = 1; i <= n; i++){
+        char ch = 'E'-(i-1);
+		for(int j = 1; j <= i; j++){
+			cout << ch;
+            ch++;
+		}
+		cout << endl;
+	}
+}
+// Pattern No. 22
+void print22(int n){
+    int Space = 0;
+    for(int i = 0; i < n; i++){
+        // Stars
+        for(int j = 1; j <= n-i; j++){
+            cout << "*";
+        }
+        // Space
+        for(int j = 1; j <= Space; j++){
+            cout << " ";
+        }
+        // Stars
+        for(int j = 1; j <= n-i; j++){
+            cout << "*";
+        }
+        Space += 2;
+        cout << endl;
+    }
+    Space = 2*n-2;
+    for(int i = 1; i < n; i++){
+        // Stars
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+        // Space
+        for(int j = 1; j <= Space; j++){
+            cout << " ";
+        }
+        // Stars
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+        Space -= 2;
+        cout << endl;
+    }
+}
+// Pattern No. 23
+void print23(int n){
+    int inspace = 2*n - 2;
+    for(int i = 1; i <= 2*n-1; i++){
+        int star = i;
+        if(i > n) star = 2*n - i;
+        // Stars
+        for(int j = 1; j <= star; j++){
+            cout << "*";
+        }
+        // Space
+        for(int j =1; j <= inspace; j++){
+            cout << " ";
+        }
+        // Stars
+        for(int j = 1; j <= star; j++){
+            cout << "*";
+        }
+        cout << endl;
+        if(i < n) inspace -= 2;
+        else inspace += 2;
+    }
+}
+void print24(int n){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(i == 0 || j == 0 || i == n-1 || j == n-1){
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+
+
 int main(){
     int n;
     cout << "Enter num:", cin >> n;
-    print16(n);
+    print24(n);
 }
