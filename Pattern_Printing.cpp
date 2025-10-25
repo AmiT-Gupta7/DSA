@@ -325,5 +325,5 @@ void print24(int n){
 int main(){
     int n;
     cout << "Enter num:", cin >> n;
-    print24(n);
+    print7(n);
 }
