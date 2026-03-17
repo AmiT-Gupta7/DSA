@@ -1,4 +1,2 @@
-// using Loops
-    // for(auto it = v.begin(); it != v.end(); it++){
-    //     cout << *it << " ";
-    // }
+    // cout << mpp[1] << endl;
+    // cout << mpp[6] << endl;
