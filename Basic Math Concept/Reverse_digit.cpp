@@ -11,9 +11,23 @@ int RevrseDigit(int n){
     return rev;
 }
 
+// optimized approach
+
+int reverse(int n){
+    int rev = 0;
+    while(n != 0){
+        rev = rev*10 + (n % 10);
+        if(rev > INT_MAX || rev < INT_MIN){
+            return 0;
+        }
+        n = n / 10;
+    }
+    return rev;
+}
+
 int main(){
     int n;
     cin >> n;
-    cout << RevrseDigit(n) << endl;
+    cout << reverse(n) << endl;
     return 0;
 }
