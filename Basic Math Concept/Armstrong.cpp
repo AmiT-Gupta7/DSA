@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int armstrong(int n){
+void armstrong(int n){
     int dupl = n;
     int rev = 0;
     while(n != 0){
@@ -9,13 +9,16 @@ int armstrong(int n){
         rev = rev + (d*d*d);
         n = n / 10;
     }
-    return rev; 
+    if(dupl == rev){
+        cout << "Armstrong...";
+    }
+    else cout << "NOT Armstrong...";
+      
 }
 
 int main(){
     int n;
     cout << "Enter a Number:";
     cin >> n;
-    cout << armstrong(n) << endl;
-    return 0;
+    armstrong(n);
 }
