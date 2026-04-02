@@ -42,9 +42,9 @@ bool isPalindrome2(string s) {
 }
 
 int main(){
-    string s = "";
-    cout << "Enter String:";
-    cin >> s;
+    string s = " ";
+    // cout << "Enter String:";
+    // cin >> s;
     // cout << strPalindrome(0, s);
     // return 0;
     cout << isPalindrome2(s);
